@@ -1,0 +1,43 @@
+id,text,label,language,category,source
+s01,"Dear Customer, your bank account will be blocked today due to incomplete KYC. Update immediately: http://sbi-kyc-update.xyz",1,en,kyc,synthetic-starter
+s02,SBI Alert: Your YONO account is suspended. Enter your card number and PIN to reactivate: https://sbi-yono-reactivate.xyz,1,en,credential,synthetic-starter
+s03,India Post: Your parcel is held due to incomplete address. Pay Rs 25 redelivery fee: http://indiapost-redelivery.top,1,en,delivery,synthetic-starter
+s04,"Congratulations! You have won a lottery prize of Rs 25,00,000. Click to claim: www.lucky-prize-claim.top",1,en,prize,synthetic-starter
+s05,Work from home job. Earn Rs 3000 per day by completing simple tasks. Message us on WhatsApp 9876543210,1,en,job,synthetic-starter
+s06,"Guaranteed returns 30% daily profit. Join our VIP trading group now, limited slots: t.me/profitking",1,en,investment,synthetic-starter
+s07,"To resolve your refund, install AnyDesk and share the 9-digit code with our support agent.",1,en,remote,synthetic-starter
+s08,This is CBI. A parcel in your name contains illegal items. An arrest warrant has been issued. Stay on video call and do not tell anyone.,1,en,digital_arrest,synthetic-starter
+s09,"Approve the collect request of Rs 1 on your UPI app to receive your refund of Rs 4,999.",1,en,payment,synthetic-starter
+s10,"You are selected for Amazon work from home job. Pay Rs 1,500 registration fee to confirm.",1,en,job,synthetic-starter
+s11,Your electricity connection will be disconnected tonight. Call 9123456780 immediately to update bill.,1,en,account,synthetic-starter
+s12,Download the SBI Reward app apk from http://sbi-rewards-claim.cfd/app.apk to redeem your reward points today.,1,en,remote,synthetic-starter
+s13,Mee bank account block avutundi. KYC update cheyandi ventane: http://hdfc-verify-kyc.top,1,te-rom,kyc,synthetic-starter
+s14,Meeku Rs 5000 cashback vachindi. OTP cheppandi claim cheyadaniki ippude.,1,te-rom,credential,synthetic-starter
+s15,Work from home job undi. Roju earn Rs 3000 per day. WhatsApp 9876543210 ki message cheyandi.,1,te-rom,job,synthetic-starter
+s16,మీ ఖాతా ఈరోజే బ్లాక్ అవుతుంది. వెంటనే KYC అప్‌డేట్ చేయండి: http://sbi-kyc-update.xyz,1,te,kyc,synthetic-starter
+s17,"అభినందనలు! మీరు రూ. 25,00,000 లాటరీ గెలుచుకున్నారు. క్లెయిమ్ చేయడానికి ఈ లింక్ క్లిక్ చేయండి: www.lucky-prize-claim.top",1,te,prize,synthetic-starter
+s18,"మీ ఓటీపీ వెంటనే చెప్పండి, లేకపోతే మీ ఖాతా మూసివేయబడుతుంది.",1,te,credential,synthetic-starter
+s19,आपका बैंक खाता आज बंद हो जाएगा। तुरंत केवाईसी अपडेट करें: http://sbi-kyc.top/update,1,hi,kyc,synthetic-starter
+s20,"बधाई हो! आपने ₹10,00,000 की लॉटरी जीत ली है। इनाम पाने के लिए तुरंत लिंक खोलें: www.kbc-inaam.top",1,hi,prize,synthetic-starter
+s21,Aapka account band ho jayega. Turant KYC update karein: bit.ly/3xYzAbC,1,hi-rom,kyc,synthetic-starter
+s22,Kripya turant OTP bhejiye warna aapka khata block ho jayega.,1,hi-rom,credential,synthetic-starter
+l01,123456 is your OTP for HDFC Bank NetBanking. Do not share it with anyone. Bank never asks for OTP.,0,en,otp,synthetic-starter
+l02,"Rs 2,000.00 debited from A/c XX1234 on 12-Nov-26 via UPI. If not done by you, call 1930 or your bank.",0,en,bank_alert,synthetic-starter
+l03,Your Amazon order #408-123 has shipped. Delivery expected Tuesday. Track at https://www.amazon.in/orders,0,en,delivery,synthetic-starter
+l04,"Reminder: Your electricity bill of Rs 1,200 is due on 25 Nov. Pay on the official app to avoid late fee.",0,en,bill,synthetic-starter
+l05,Your KYC has been updated successfully. Thank you for banking with us.,0,en,bank_alert,synthetic-starter
+l06,"Hi, your Swiggy order is out for delivery. Rider will call you shortly.",0,en,delivery,synthetic-starter
+l07,Congrats on your new job! Let's catch up this weekend.,0,en,personal,synthetic-starter
+l08,Your SBI Card reward points worth Rs 250 will expire on 30-Nov. Redeem via the SBI Card app.,0,en,marketing,synthetic-starter
+l09,"Mom, I am at the station. Please call me when you see this, it is urgent.",0,en,personal,synthetic-starter
+l10,Meeting moved to 4 PM today. Please join immediately after lunch. Link: https://meet.google.com/abc-defg-hij,0,en,work,synthetic-starter
+l11,Airtel: Your recharge of Rs 299 is successful. Validity 28 days. Thank you.,0,en,bank_alert,synthetic-starter
+l12,Enter OTP 889977 to complete your Flipkart login. Do not share this OTP with anyone.,0,en,otp,synthetic-starter
+l13,Flat 20% off on all electronics this weekend at Croma. Visit croma.com for details.,0,en,marketing,synthetic-starter
+l14,Your IRCTC ticket PNR 4521367890 is confirmed. Happy journey!,0,en,travel,synthetic-starter
+l15,"Salary credited Rs 45,000 to A/c XX5678. Available balance Rs 52,310.",0,en,bank_alert,synthetic-starter
+l16,Mee order ippude out for delivery undi. Dayachesi call ki available undandi.,0,te-rom,delivery,synthetic-starter
+l17,మీ OTP 482913. దీన్ని ఎవరితోనూ పంచుకోవద్దు. - SBI,0,te,otp,synthetic-starter
+l18,మీ రైలు టికెట్ నిర్ధారించబడింది. శుభ ప్రయాణం!,0,te,travel,synthetic-starter
+l19,आपका ओटीपी 556677 है। इसे किसी के साथ साझा न करें।,0,hi,otp,synthetic-starter
+l20,Aapka bijli bill Rs 850 hai. Kripya 25 tarikh tak jama karein.,0,hi-rom,bill,synthetic-starter
