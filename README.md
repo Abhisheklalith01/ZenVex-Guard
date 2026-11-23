@@ -6,6 +6,22 @@ ZenVex Guard is a cybersecurity threat intelligence platform engineered to ident
 
 ---
 
+## Modular Documentation for Developers & AI Agents
+
+Each subsystem has a dedicated developer manual so autonomous agents and engineers can inspect the architecture, understand the contracts, and write code independently:
+
+| Guide | Location | Scope & Purpose |
+|---|---|---|
+| **Root Master Manual** | [`README.md`](./README.md) | Platform overview, quick start, system architecture, and change log |
+| **Backend Developer Guide** | [`backend/README.md`](./backend/README.md) | 12-indicator rules, 14-check URL parser, playbooks, scoring formulas, ML models & API endpoints |
+| **Frontend Developer Guide** | [`frontend/README.md`](./frontend/README.md) | React 18, component hierarchy, Recharts dashboards, API client, types, and styling tokens |
+| **Agents Rulebook** | [`AGENTS.md`](./AGENTS.md) | Hard safety rules, stateless constraints, and cross-module permissions |
+| **API Contract** | [`docs/API_CONTRACT.md`](./docs/API_CONTRACT.md) | Endpoint specifications, JSON request/response bodies, and HTTP status codes |
+| **High-Level Design** | [`docs/HLD.md`](./docs/HLD.md) | System components, sequence flows, threat models, and architectural boundaries |
+| **Low-Level Design** | [`docs/LLD.md`](./docs/LLD.md) | Detailed algorithmic specifications, regex design, and regex offset rules |
+
+---
+
 ## What It Does
 
 1. **Multilingual Script & Transliteration Detection**: Identifies language structure across English, Telugu (తెలుగు), Hindi (हिंदी), Romanised Telugu, Romanised Hindi, and code-mixed phrasing.
@@ -39,61 +55,74 @@ Structured Threat Dossier & Safety Protocol (En/Te)
 
 ---
 
+## Changelog & Transformation from Legacy Base
+
+| Area | Legacy Starter State | ZenVex Guard Enhanced State |
+|---|---|---|
+| **Branding** | ScamLens / ScamLens 2.0 placeholder branding | Completely rebranded as **ZenVex Guard** (Detect. Analyse. Protect.) with zero legacy references |
+| **Frontend UI** | Single static HTML page (`index.html`, 12 KB) | Full-featured React 18 + TypeScript + Vite + Tailwind CSS dashboard with glassmorphism visual style |
+| **Visualizations** | No charts or timeline graphics | Real-time Recharts `AreaChart` throughput timeline & `BarChart` threat category breakdowns |
+| **URL Intelligence** | Coupled only with text scan form | Standalone dedicated URL Intelligence console with air-gapped sandbox badge and structural diagnostics |
+| **Scam Library** | Hardcoded playbooks without UI viewer | Interactive searchable Scam Intelligence Library covering all 9 Indian playbooks with 1-click test buttons |
+| **Protection Centre**| Minimal static bullet points | Interactive Emergency Response Switcher (Deducted Money, Shared Creds, Clicked APK) + 4 Defense Hygiene cards |
+| **Investigation Dossier**| Basic text dump | Multi-tab dossier with interactive character span highlighting, cognitive manipulation analysis, and JSON export |
+| **Backend APIs** | Only `/scan/text`, `/scan/url`, `/examples` | Added `/api/v1/playbooks`, `/api/v1/stats`, CORS support, and automatic SPA client routing |
+
+---
+
 ## Directory Structure
 
 ```
 zenvex-guard/
-├── backend/
+├── backend/                  # See backend/README.md for developer details
 │   ├── app/
-│   │   ├── engine/       # Rule engine, offline URL parser, playbooks, risk scoring
-│   │   ├── ml/           # ML baseline scorer (TF-IDF + Logistic Regression)
-│   │   ├── static/       # Fallback static UI assets
-│   │   ├── config.py     # Central configuration & helplines
-│   │   ├── main.py       # FastAPI application & endpoints
-│   │   └── schemas.py    # Pydantic request/response schemas
-│   ├── tests/            # Pytest test suite (22 unit tests)
-│   └── requirements.txt  # FastAPI, Uvicorn, Pydantic, Scikit-learn
-├── frontend/
+│   │   ├── engine/           # Rule engine, offline URL parser, playbooks, risk scoring
+│   │   ├── ml/               # ML baseline scorer (TF-IDF + Logistic Regression)
+│   │   ├── static/           # Fallback static UI assets
+│   │   ├── config.py         # Central configuration & helplines
+│   │   ├── main.py           # FastAPI application & endpoints
+│   │   └── schemas.py        # Pydantic request/response schemas
+│   ├── tests/                # Pytest test suite (22 unit tests)
+│   ├── requirements.txt      # FastAPI, Uvicorn, Pydantic, Scikit-learn
+│   └── README.md             # Dedicated Backend Developer Guide
+├── frontend/                 # See frontend/README.md for developer details
 │   ├── src/
-│   │   ├── components/   # Navbar, Landing, Dashboard, Scanner, URL, Dossier, Library
-│   │   ├── services/     # API integration & error handling
-│   │   ├── types/        # TypeScript interfaces
-│   │   ├── App.tsx       # Main router & application controller
-│   │   └── main.tsx      # React root
-│   ├── dist/             # Production build served by FastAPI
+│   │   ├── components/       # Navbar, Landing, Dashboard, Scanner, URL, Dossier, Library
+│   │   ├── services/         # API integration & error handling
+│   │   ├── types/            # TypeScript interfaces
+│   │   ├── App.tsx           # Main router & application controller
+│   │   └── main.tsx          # React root
+│   ├── dist/                 # Production build served by FastAPI
 │   ├── package.json
-│   └── vite.config.ts
-└── docs/                 # HLD, LLD, API Contract, Test & Privacy plans
+│   ├── vite.config.ts
+│   └── README.md             # Dedicated Frontend Developer Guide
+├── docs/                     # HLD, LLD, API Contract, Test & Privacy plans
+├── start_zenvex_guard.bat    # 1-Click launcher for both API and React Dashboard
+├── run_backend.bat           # 1-Click backend launcher
+├── run_frontend.bat          # 1-Click Vite dev launcher
+└── push_to_github.bat        # 1-Click GitHub publisher
 ```
 
 ---
 
 ## Quick Start & Execution
 
-### 1. Backend Server (FastAPI)
+### 1. One-Click Launch (Recommended)
+Double-click **`start_zenvex_guard.bat`** in the project root.  
+Open your browser to: **`http://127.0.0.1:8000`**
 
+### 2. Manual Development Mode
 ```bash
+# Terminal 1: Backend API
 cd backend
 python -m pip install -r requirements.txt
-python -m pytest tests/              # Run test suite (22 passed)
+python -m pytest tests/              # 22 tests pass
 uvicorn app.main:app --reload        # Starts at http://127.0.0.1:8000
-```
 
-*Interactive API documentation is accessible at `http://127.0.0.1:8000/docs`.*
-
-### 2. Frontend Development Server (Vite)
-
-```bash
+# Terminal 2: Frontend Dev Server (Vite)
 cd frontend
 npm install
 npm run dev                          # Starts at http://localhost:5173
-```
-
-### 3. Production Deployment Mode
-
-The compiled React frontend is located in `frontend/dist`. When you run the FastAPI backend, it automatically serves the complete production React application directly at:
-```
-http://127.0.0.1:8000
 ```
 
 ---
